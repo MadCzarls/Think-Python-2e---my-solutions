@@ -21,21 +21,22 @@ equals the third, they form what is called a “degenerate” triangle.)
     with the given lengths can form a triangle.
 """
 
+
 def is_triangle(a, b, c):
-    if a > b + c:
+    if (a > b + c) or (b > a + c) or (c > a + b):
         print("No")
-    elif b > a + c:
-        print("No")
-    elif c > a + b:
-        print("No")
+    elif (a == b + c) or (b == a + c) or (c == a + b):
+        print("Degenerate")
     else:
         print("Yes")
 
+
 def prompting():
-    a = input("Type length of side a: ")
-    b = input("Type length of side b: ")
-    c = input("Type length of side c: ")
-    
-    is_triangle(int(a), int(b), int(c))
-    
+    a = int(float(input("Type length of side a: ")))
+    b = int(float(input("Type length of side b: ")))
+    c = int(float(input("Type length of side c: ")))
+
+    is_triangle(a, b, c)
+
+
 prompting()
