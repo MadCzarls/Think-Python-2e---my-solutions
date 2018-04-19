@@ -30,11 +30,11 @@ def check_fermat(a, b, c, n):
         print("No, that doesn't work.")
 
 def prompting():
-    a = input("Type your value of a: ")
-    b = input("Type your value of b: ")
-    c = input("Type your value of c: ")
-    n = input("Type your value of n: ")
-    
-    check_fermat(int(a), int(b), int(c), int(n))
+    a = int(float(input("Enter a: ")))
+    b = int(float(input("Enter b: ")))
+    c = int(float(input("Enter c: ")))
+    n = int(float(input("Enter n: ")))
+
+    check_fermat(a, b, c, n)
 
 prompting()
