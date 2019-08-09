@@ -33,11 +33,16 @@ Solution: http://thinkpython2.com/code/rotate.py
 """
 
 def rotate_word(word, shift):
-    """Uses Ceasar cypher to encrypt given word using given shift."""
-    rotated_word = ''
+    """
+    Uses Caesar cypher to encrypt given word using given shift.
+    Note: we need to deal with the case like
+    '[' = chr(ord('e') - 10)
+    """
+    new_letter = []
     for letter in word:
-        rotated_word += chr(ord(letter) + shift)
-    return rotated_word
-
-print(rotate_word('cheer', 7))
-print(rotate_word('IBM', -1))
+        if letter isuppder():
+            new_ord = (ord(letter) + shift - 65) %26 + 65
+        else:
+            new_ord = (ord(letter) + shift - 97) %26 + 97
+        new_letter.append(chr(new_ord)
+    return ''.join(new_letter)                          
