@@ -13,4 +13,5 @@
 In nine chapters (exercise 8.1 and exercises from chapters 1 and 2 not included,
 they were about reading docs, doing simple math in interpreter etc.) there are
 
-53 exercises
+55 exercises
+
