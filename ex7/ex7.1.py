@@ -49,29 +49,16 @@ def test_square_root(list_of_a):
     """Displays outcomes of calculating square root of a using different methods;
     list_of_a - list of positive digit.
     """
-    line1a = "a"
-    line1b = "mysqrt(a)"
-    line1c = "math.sqrt(a)"
-    line1d = "diff"
+    print("a   mysqrt(a)     math.sqrt(a)  diff")
+    print("-   ---------     ------------  ----")
     
-    line2a = "-"
-    line2b = "---------"
-    line2c = "------------"
-    line2d = "----"
-    
-    spacing1 = " "
-    spacing2 = " " * 3
-    spacing3 = ""
-    
-    print(line1a, spacing1, line1b, spacing2, line1c, spacing3, line1d)
-    print(line2a, spacing1, line2b, spacing2, line2c, spacing3, line2d)
-    
-    for a in list_of_a:
-        col1 = float(a)
-        col2 = mysqrt(a)
-        col3 = math.sqrt(a)
-        col4 = abs(mysqrt(a) - math.sqrt(a))
+    for i in range (1, 10):
+        
+        check_list = {i: [mysqrt(i), math.sqrt(i)]}
 
-        print(col1, "{:<13f}".format(col2), "{:<13f}".format(col3), col4)
+        for k, v in check_list.items():
+            diff = math.sqrt(i) - mysqrt(i)
+            print("{:<3} {:<13.11} {:<13.11} {:<10.11}".format(i, mysqrt(i), math.sqrt(i), diff)
+
 
 test_square_root(range(1,10))
