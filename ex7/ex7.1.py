@@ -61,4 +61,4 @@ def test_square_root(list_of_a):
             print("{:<3} {:<13.11} {:<13.11} {:<10.11}".format(i, mysqrt(i), math.sqrt(i), diff)
 
 
-test_square_root(range(1,10))
+test_square_root(1,10)
