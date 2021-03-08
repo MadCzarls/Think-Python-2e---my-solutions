@@ -1,4 +1,4 @@
-<font size = 20> THINK PYTHON </font>
+<font size = 35> THINK PYTHON </font>
 
 This repo is for think python 2e problems at the end of each chapter.
 
