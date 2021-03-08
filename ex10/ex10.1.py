@@ -10,12 +10,13 @@ adds up the elements from all of the nested lists. For example:
 21
 """
 
-def nested_sum(li):
-    result = 0
-    for elem in li:
-        result += sum(elem)
-    return result
+def nested_sum(list_int):
+  total = 0
+  for i in list_int:
+    for j in i:
+      total += j
+  return total
 
 
 t = [[1, 2], [3], [4, 5, 6]]
-print(nested_sum(t))
+nested_sum(t)
