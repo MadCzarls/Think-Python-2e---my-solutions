@@ -28,10 +28,11 @@ def eval_loop():
     while True:
         user_input = input(">>> ")
         
-        if eval(user_input) == 'done':  
+        if user_input == 'done':  
             break
-        print(eval(user_input))
+        evaluated = eval(user_input)
+        print(evaluated)
 
-    return eval(user_input)
+    print('DONE!!',evaluated)
 
 eval_loop()
